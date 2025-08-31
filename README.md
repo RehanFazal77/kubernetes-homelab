@@ -45,6 +45,14 @@ Each VM runs **Ubuntu 24.04 LTS** with **containerd** as the container runtime, 
 
 ---
 
+**Setup Overview**
+Provision VMs with Multipass
+```bash
+            multipass launch -n <control-plane-name> -c 2 -m 2G -d 20G
+            multipass launch -n <workernode-name> -c 2 -m 2G -d 20G
+            multipass launch -n <workernode1-name> -c 2 -m 2G -d 20G
+```
+
 ## Node Roles
 
 Example of node roles after labeling worker nodes:
@@ -86,24 +94,15 @@ chmod +x workernode_script.sh
 ./workernode_script.sh
 ```
 
-Both scripts are designed to run independently on separate nodes and automate all necessary setup steps.
-
-
-**Setup Overview**
-Provision VMs with Multipass
-```bash
-            multipass launch -n <control-plane-name> -c 2 -m 2G -d 20G
-            multipass launch -n <workernode-name> -c 2 -m 2G -d 20G
-            multipass launch -n <workernode1-name> -c 2 -m 2G -d 20G
-```
-
-Run Control-Plane Script on control-plane VM.
-Run Worker Node Script on each worker VM and paste the join command from control-plane.
+**Both scripts are designed to run independently on separate nodes and automate all necessary setup steps.**
+* Run Control-Plane Script on control-plane VM.
+* Run Worker Node Script on each worker VM and paste the join command from control-plane.
 
 Verify Cluster from control-plane:
+```bash
             kubectl get nodes -o wide
             kubectl get pods -A
-
+```
 **Learning Outcomes**
 * Hands-on experience with multi-node Kubernetes cluster setup
 * Understanding container runtimes, kubelet configuration, and networking (CNI)
