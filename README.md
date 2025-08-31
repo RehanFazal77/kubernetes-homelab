@@ -80,7 +80,7 @@ chmod +x controlplane_script.sh
 * Disables swap, sets kernel modules and sysctl.
 * Prompts to paste the kubeadm join command from the control-plane node.
 
-# On each worker VM
+On each worker VM
 ```bash
 chmod +x workernode_script.sh
 ./workernode_script.sh
