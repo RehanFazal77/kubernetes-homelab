@@ -1,0 +1,8 @@
+multipass launch \
+  --name rehan-control-plane \
+  --cpus 2 \
+  --memory 2G \
+  --disk 20G
+  
+you can also modify these spec a/c to your need   
+follow the same specs for workernode 
