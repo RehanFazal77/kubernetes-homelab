@@ -58,80 +58,60 @@ rehanfazal-workernode1     Ready    worker-node     22m    v1.34.0   10.145.93.2
 ```
 
 
-Automated Setup Scripts
+**#Automated Setup Scripts**
 
-This homelab uses shell scripts to automate the installation of Kubernetes components on each node.
+**This homelab uses shell scripts to automate the installation of Kubernetes components on each node.**
 
-1. Control-Plane Node Script
-
-Script: controlplane_script.sh
-
-Run on the control-plane VM only.
-
-Installs container runtime, kubeadm, kubelet, kubectl.
-
-Initializes the cluster with kubeadm init.
-
-Deploys Flannel CNI and configures the kubelet.
+            1. Control-Plane Node Script
+            Script: controlplane_script.sh
+            Run on the control-plane VM only.
+            Installs container runtime, kubeadm, kubelet, kubectl.
+            Initializes the cluster with kubeadm init.
+            Deploys Flannel CNI and configures the kubelet.
 
 # On the control-plane VM
-chmod +x controlplane_script.sh
-./controlplane_script.sh
-
-2. Worker Node Script
-
-Script: workernode_script.sh
-
-Run separately on each worker VM.
-
-Installs container runtime, kubeadm, kubelet.
-
-Disables swap, sets kernel modules and sysctl.
-
-Prompts to paste the kubeadm join command from the control-plane node.
+```bash
+            chmod +x controlplane_script.sh
+            ./controlplane_script.sh
+```
+            2. Worker Node Script
+            Script: workernode_script.sh
+            Run separately on each worker VM.
+            Installs container runtime, kubeadm, kubelet.
+            Disables swap, sets kernel modules and sysctl.
+            Prompts to paste the kubeadm join command from the control-plane node.
 
 # On each worker VM
-chmod +x workernode_script.sh
-./workernode_script.sh
-
+```bash
+            chmod +x workernode_script.sh
+            ./workernode_script.sh
+```
 
 Both scripts are designed to run independently on separate nodes and automate all necessary setup steps.
 
 
-Setup Overview
-
+**Setup Overview**
 Provision VMs with Multipass
-
-multipass launch -n <control-plane-name> -c 2 -m 2G -d 20G
-multipass launch -n <workernode-name> -c 2 -m 2G -d 20G
-multipass launch -n <workernode1-name> -c 2 -m 2G -d 20G
+            multipass launch -n <control-plane-name> -c 2 -m 2G -d 20G
+            multipass launch -n <workernode-name> -c 2 -m 2G -d 20G
+            multipass launch -n <workernode1-name> -c 2 -m 2G -d 20G
 
 
 Run Control-Plane Script on control-plane VM.
-
 Run Worker Node Script on each worker VM and paste the join command from control-plane.
 
 Verify Cluster from control-plane:
+            kubectl get nodes -o wide
+            kubectl get pods -A
 
-kubectl get nodes -o wide
-kubectl get pods -A
-
-Learning Outcomes
-
-Hands-on experience with multi-node Kubernetes cluster setup
-
-Understanding container runtimes, kubelet configuration, and networking (CNI)
-
-Manual worker node joining for better comprehension
-
-Node labeling and role management
-
-Practice in cluster verification and basic troubleshooting
-
-Exposure to automation with shell scripts for consistent cluster setup
+**Learning Outcomes**
+* Hands-on experience with multi-node Kubernetes cluster setup
+* Understanding container runtimes, kubelet configuration, and networking (CNI)
+* Manual worker node joining for better comprehension
+* Node labeling and role management
+* Practice in cluster verification and basic troubleshooting
+* Exposure to automation with shell scripts for consistent cluster setup
 
 Author
-
 Rehan Fazal
-
 GitHub: rehanfazal77
