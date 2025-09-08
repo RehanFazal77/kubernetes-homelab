@@ -36,7 +36,7 @@ install_if_missing() {
 
 echo "=== Kubernetes Worker Node Setup Started ==="
 
-# Pre-requisite check
+# Pre-requisite check(system check)
 echo "=== Checking dependencies ==="
 sudo apt-get update -y
 install_if_missing apt-transport-https ca-certificates curl gpg iptables iproute2
