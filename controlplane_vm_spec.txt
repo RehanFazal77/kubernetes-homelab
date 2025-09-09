@@ -3,6 +3,7 @@ multipass launch \
   --cpus 2 \
   --memory 2G \
   --disk 20G
-  
+
+IF you have enough storage then you can set storage to 50G
 you can also modify these spec a/c to your need   
 follow the same specs for workernode 
