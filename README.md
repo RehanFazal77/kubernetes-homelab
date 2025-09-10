@@ -16,7 +16,7 @@ Each VM runs **Ubuntu 24.04 LTS** with **containerd** as the container runtime, 
 ## Tools & Technologies
 
 - **VM Management**: [Multipass](https://multipass.run/)  
-- **Operating System**: Ubuntu 24.04 LTS  
+- **Operating System**: Ubuntu 24.04 LTS [current]
 - **Container Runtime**: containerd v1.7.x  
 - **Kubernetes**: v1.34.0  
 - **Networking**: Flannel CNI  
