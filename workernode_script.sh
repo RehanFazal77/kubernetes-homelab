@@ -82,7 +82,7 @@ retry sudo systemctl restart containerd
 sudo systemctl enable containerd
 containerd config dump | grep SystemdCgroup
 
-# 6. Add Kubernetes Repository
+# 6. Add Kubernetes Repository(change this to the latest repo to install the current lastest version)
 echo "=== 6. Adding Kubernetes repository ==="
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.34/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
