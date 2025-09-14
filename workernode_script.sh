@@ -45,7 +45,7 @@ install_if_missing apt-transport-https ca-certificates curl gpg iptables iproute
 echo "=== 1. Updating system ==="
 sudo apt-get upgrade -y
 
-# 2. Disable Swap, it create problem for k8s scheduler
+# 2. Disable Swap, it create problem for k8s scheduler.
 echo "=== 2. Disabling swap ==="
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
