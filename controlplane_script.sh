@@ -70,7 +70,7 @@ EOF
 sudo sysctl --system
 sudo sysctl -w net.ipv4.ip_forward=1
 
-# 5. Install Container Runtime (containerd, if you want a different CRI then edit this step 5 a/c to your need)
+# 5. Install Container Runtime (containerd, if you want a different CRI then edit this step 5 a/c to your need).
 echo "=== 5. Installing containerd ==="
 sudo apt-get install -y containerd
 
