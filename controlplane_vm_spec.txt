@@ -1,3 +1,32 @@
+VM Specification for Kubernetes Homelab
+
+The Kubernetes homelab environment is provisioned using Multipass. Each virtual machine is configured with the following baseline specifications:
+
+Control Plane Node
+
+multipass launch \
+  --name rehan-control-plane \
+  --cpus 2 \
+  --memory 2G \
+  --disk 20G
+
+Worker Node(s)
+The same specifications are applied to each worker node for consistency and balanced resource allocation.
+
+Storage Considerations
+
+Default: 20 GB disk space.
+
+Recommended: 50 GB (if adequate storage capacity is available).
+
+Specifications (CPU, memory, and storage) can be adjusted based on system resources and workload requirements.
+
+
+
+This setup provides a lightweight yet flexible environment suitable for experimenting with Kubernetes components, cluster operations, and workload scheduling within a local homelab.
+
+
+old version
 multipass launch \
   --name rehan-control-plane \
   --cpus 2 \
