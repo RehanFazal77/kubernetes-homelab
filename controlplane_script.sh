@@ -142,6 +142,6 @@ kubectl get pods -n kube-flannel
 kubectl get nodes
 
 echo "=== Kubernetes Control Plane Setup Completed Successfully! ==="
-echo "Worker nodes can join using kubeadm-join-command.sh"
+echo "Worker nodes can join using kubeadm-join-command."
 echo "All logs saved in $LOG_FILE"
 
