@@ -1,4 +1,4 @@
-VM Specification for Kubernetes Homelab
+Virtual Machine(VM) Specification for Kubernetes Homelab
 
 The Kubernetes homelab environment is provisioned using Multipass(you are free to use any other vm). Each virtual machine is configured with the following baseline specifications:
 
