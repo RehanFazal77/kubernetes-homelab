@@ -13,7 +13,7 @@ multipass launch \
 Worker Node(s)
 The same specifications are applied to each worker node for consistency and balanced resource allocation.
 
-Storage Considerations
+Storage Considerations:
 
 Default: 20 GB disk space.
 
