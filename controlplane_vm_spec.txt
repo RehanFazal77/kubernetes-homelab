@@ -23,7 +23,7 @@ Specifications (CPU, memory, and storage) can be adjusted based on system resour
 
 
 
-This setup provides a lightweight yet flexible environment suitable for experimenting with Kubernetes components, cluster operations, and workload scheduling within a local homelab.
+This setup provides a lightweight yet flexible environment suitable for experimenting with Kubernetes components, cluster operations and workload scheduling within a local homelab.
 
 
 old version
