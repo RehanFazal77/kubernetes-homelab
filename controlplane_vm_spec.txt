@@ -35,4 +35,4 @@ multipass launch \
 
 IF you have enough storage then you can set storage to 50G
 you can also modify these spec according to your need   
-follow the same specs for workernode 
+follow the same specs for workernode.
