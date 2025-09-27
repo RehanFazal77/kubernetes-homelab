@@ -113,5 +113,5 @@ retry $JOIN_CMD
 
 echo "=== Kubernetes Worker Node Setup Completed Successfully! ==="
 echo "Use 'kubectl get nodes' on the control-plane to verify this node has joined the cluster."
-echo "All logs saved in $LOG_FILE"
+echo "All logs saved in $LOG_FILE".
 
