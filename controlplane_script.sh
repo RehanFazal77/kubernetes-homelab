@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-
+#This script install the control plane 
 LOG_FILE="$HOME/k8s-setup.log"
 echo "Logging setup to $LOG_FILE"
 exec > >(tee -a "$LOG_FILE") 2>&1
